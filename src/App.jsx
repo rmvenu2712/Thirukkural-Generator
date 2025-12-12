@@ -5,6 +5,7 @@ import { PiFlowerFill } from "react-icons/pi";
 import { Header } from './Comp/Header';
 import { Footer } from './Comp/Footer';
 import Slider from './Comp/Slider';
+import TranslateWidget from './TranslateWidget';
 
 
 
@@ -34,8 +35,10 @@ export const App = () => {
               <div className=" bg-gradient-to-r from-center-cl via-main-cl to-center-cl shadow-3xl sm:w-5/6 w-full py-10 sm:px-10 px-0 h-auto rounded-2xl mx-3 sm:mx-0 ">
                   <h2 className='font-extrabold text-3xl pb-10 text-center'>திருக்குறள்</h2>
                   <form className='flex justify-center' onSubmit={handleSubmit}>
-                    <input className='border-2 rounded-s-lg w-25 px-2 py-3' type="text" placeholder="Enter NO" value={inputId} onChange={(e) => setInputId(e.target.value)} />
+                    <input className='border-2 rounded-s-lg w-25 px-2 py-3' type="text" placeholder="Enter NO" value={inputId} onChange={(e) => setInputId(e.target.value)} /> 
                     <button className='border-2 rounded-e-lg px-2 py-3 bg-white' type="submit"><RiSearchEyeLine size={24}/></button>
+                  <TranslateWidget/>
+                
                   </form>
 
                   {error && <p style={{ color: 'red' }}>{error}</p>}

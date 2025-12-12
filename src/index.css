@@ -5,3 +5,11 @@
 body{
     color:black;
 }
+#google_translate_element {
+  margin: 10px; /* Add spacing */
+}
+
+/* Hide Google's branding if allowed (check terms) */
+.goog-logo-link {
+  display: none !important;
+}

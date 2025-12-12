@@ -1,3 +1,58 @@
-body{
-    color: black;
+/* ────────────────────────────────────────────── */
+/* COMPLETELY HIDE GOOGLE BRANDING & UGLY PARTS */
+/* ────────────────────────────────────────────── */
+.goog-te-gadget {
+  color: transparent !important;
+  font-size: 0 !important;
+}
+
+.goog-te-gadget > * {
+  font-size: 0 !important;
+}
+
+/* Only show the dropdown */
+.goog-te-combo {
+  color: white !important;
+  background: linear-gradient(135deg, #7c3aed, #ec4899) !important;
+  border: none !important;
+  border-radius: 12px !important;
+  padding: 12px 20px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.4) !important;
+  cursor: pointer;
+  outline: none !important;
+  appearance: none !important;
+  min-width: 180px;
+}
+
+/* Arrow styling */
+.goog-te-combo::-ms-expand { display: none; }
+.goog-te-combo option { color: #000; }
+
+/* Hover effect */
+.goog-te-combo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(124, 58, 237, 0.6) !important;
+}
+
+/* Hide everything else completely */
+.goog-te-banner-frame,
+.goog-te-menu-frame,
+.goog-logo-link,
+.goog-te-gadget span,
+.goog-te-gadget a,
+#goog-gt-tt,
+.goog-te-balloon-frame,
+.goog-text-highlight {
+  display: none !important;
+}
+
+/* Prevent top margin jump when translating */
+body { top: 0 !important; }
+
+/* Optional: Change default text from "Select Language" to Tamil */
+#google_translate_element option[value=""] {
+  display: none !important;
 }
